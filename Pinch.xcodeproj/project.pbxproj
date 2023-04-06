@@ -12,6 +12,7 @@
 		8B6F7EBF29DEE1660052994A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6F7EBE29DEE1660052994A /* Assets.xcassets */; };
 		8B6F7EC229DEE1660052994A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6F7EC129DEE1660052994A /* Preview Assets.xcassets */; };
 		8B6F7ECD29DEF38A0052994A /* FrontCoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ECC29DEF38A0052994A /* FrontCoverImageView.swift */; };
+		8B6F7ECF29DF324B0052994A /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ECE29DF324B0052994A /* InfoPanelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8B6F7EBE29DEE1660052994A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B6F7EC129DEE1660052994A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B6F7ECC29DEF38A0052994A /* FrontCoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCoverImageView.swift; sourceTree = "<group>"; };
+		8B6F7ECE29DF324B0052994A /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				8B6F7ECC29DEF38A0052994A /* FrontCoverImageView.swift */,
+				8B6F7ECE29DF324B0052994A /* InfoPanelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6F7EBD29DEE1640052994A /* ContentView.swift in Sources */,
+				8B6F7ECF29DF324B0052994A /* InfoPanelView.swift in Sources */,
 				8B6F7EBB29DEE1640052994A /* PinchApp.swift in Sources */,
 				8B6F7ECD29DEF38A0052994A /* FrontCoverImageView.swift in Sources */,
 			);

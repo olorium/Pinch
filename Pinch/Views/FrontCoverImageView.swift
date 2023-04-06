@@ -11,9 +11,9 @@ import SwiftUI
 struct FrontCoverImageView: View {
 	// MARK: - Properties
 	/// Image scale property.
-	@State private var imageScale: CGFloat = 1
+	@Binding var imageScale: CGFloat
 	/// Offset for the image.
-	@State private var imageOffset: CGSize = .zero
+	@Binding var imageOffset: CGSize
 	/// Binding to define animation state.
 	@Binding var isAnimating: Bool
 	///Image name to present.
@@ -54,6 +54,7 @@ struct FrontCoverImageView: View {
 					}
 				}
 			)
+
 	}
 	
 	// MARK: - Methods
@@ -69,6 +70,6 @@ struct FrontCoverImageView: View {
 
 struct FrontCoverImageView_Previews: PreviewProvider {
     static var previews: some View {
-		FrontCoverImageView(isAnimating: .constant(true), imageName: "magazine-front-cover")
+		FrontCoverImageView(imageScale: .constant(1), imageOffset: .constant(.zero), isAnimating: .constant(true), imageName: "magazine-front-cover")
     }
 }
