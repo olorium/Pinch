@@ -50,6 +50,9 @@ struct ContentView: View {
 					})
 				.padding(.bottom, 30)
 			}
+			.overlay(alignment: .topTrailing) {
+				DrawerView(isAnimating: $isAnimating)
+			}
 		}
 		.navigationViewStyle(.stack)
     }

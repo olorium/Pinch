@@ -15,6 +15,7 @@
 		8B6F7ECF29DF324B0052994A /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ECE29DF324B0052994A /* InfoPanelView.swift */; };
 		8B6F7ED129DF42EB0052994A /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ED029DF42EB0052994A /* ControlImageView.swift */; };
 		8B6F7ED329DF48EA0052994A /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ED229DF48EA0052994A /* ControlPanelView.swift */; };
+		8B6F7ED529DF50320052994A /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ED429DF50320052994A /* DrawerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8B6F7ECE29DF324B0052994A /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 		8B6F7ED029DF42EB0052994A /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 		8B6F7ED229DF48EA0052994A /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
+		8B6F7ED429DF50320052994A /* DrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				8B6F7ECE29DF324B0052994A /* InfoPanelView.swift */,
 				8B6F7ED029DF42EB0052994A /* ControlImageView.swift */,
 				8B6F7ED229DF48EA0052994A /* ControlPanelView.swift */,
+				8B6F7ED429DF50320052994A /* DrawerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6F7ED529DF50320052994A /* DrawerView.swift in Sources */,
 				8B6F7EBD29DEE1640052994A /* ContentView.swift in Sources */,
 				8B6F7ECF29DF324B0052994A /* InfoPanelView.swift in Sources */,
 				8B6F7ED129DF42EB0052994A /* ControlImageView.swift in Sources */,
