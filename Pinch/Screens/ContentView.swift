@@ -11,14 +11,15 @@ struct ContentView: View {
 	// MARK: - Properties.
 	/// Defines animation state.
 	@State private var isAnimating = false
-	/// Image scale property.
-	@State private var imageScale: CGFloat = 1
 	
 	// MARK: - Body.
     var body: some View {
 		NavigationView {
 			ZStack {
-				FrontCoverImageView(imageName: "magazine-front-cover", isAnimating: $isAnimating, imageScale: $imageScale)
+				FrontCoverImageView(
+					isAnimating: $isAnimating,
+					imageName: "magazine-front-cover"
+				)
 			}
 			.navigationTitle("Pinch and Zoom")
 			.navigationBarTitleDisplayMode(.inline)

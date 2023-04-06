@@ -10,12 +10,14 @@ import SwiftUI
 /// View with scalable image
 struct FrontCoverImageView: View {
 	// MARK: - Properties
-	///Image name to present.
-	let imageName: String
+	/// Image scale property.
+	@State private var imageScale: CGFloat = 1
+	/// Offset for the image.
+	@State private var imageOffset: CGSize = .zero
 	/// Binding to define animation state.
 	@Binding var isAnimating: Bool
-	/// Binding for the image scale.
-	@Binding var imageScale: CGFloat
+	///Image name to present.
+	let imageName: String
 	
 	// MARK: - Body.
 	var body: some View {
@@ -26,6 +28,7 @@ struct FrontCoverImageView: View {
 			.padding()
 			.shadow(color: .black.opacity(0.2), radius: 12, x: 2, y: 2)
 			.opacity(isAnimating ? 1 : 0)
+			.offset(x: imageOffset.width, y: imageOffset.height)
 			.animation(.linear(duration: 1), value: isAnimating)
 			.scaleEffect(imageScale)
 			.onTapGesture(count: 2) {
@@ -34,16 +37,38 @@ struct FrontCoverImageView: View {
 						imageScale = 5
 					}
 				} else {
-					withAnimation(.spring()) {
-						imageScale = 1
-					}
+					resetImageState()
 				}
 			}
+			.gesture(DragGesture()
+				.onChanged { value in
+					withAnimation(.linear(duration: 1)) {
+						imageOffset = value.translation
+					}
+				}
+				.onEnded { _ in
+					if imageScale <= 1 {
+						withAnimation(.spring()) {
+							resetImageState()
+						}
+					}
+				}
+			)
+	}
+	
+	// MARK: - Methods
+	
+	/// Resets image scale and offset to default values with animation.
+	private func resetImageState() {
+		withAnimation(.spring()) {
+			imageScale = 1
+			imageOffset = .zero
+		}
 	}
 }
 
 struct FrontCoverImageView_Previews: PreviewProvider {
     static var previews: some View {
-		FrontCoverImageView(imageName: "magazine-front-cover", isAnimating: .constant(true), imageScale: .constant(1))
+		FrontCoverImageView(isAnimating: .constant(true), imageName: "magazine-front-cover")
     }
 }
