@@ -16,14 +16,16 @@ struct FrontCoverImageView: View {
 	@Binding var imageOffset: CGSize
 	/// Binding to define animation state.
 	@Binding var isAnimating: Bool
+	/// The index of the image.
+	@Binding var pageIndex: Int
 	///Image name to present.
-	let imageName: String
+	let pages: [Page]
 	/// Closure for resetting image state.
 	let resetImageState: () -> Void
 	
 	// MARK: - Body.
 	var body: some View {
-		Image(imageName)
+		Image(pages[pageIndex].imageName)
 			.resizable()
 			.aspectRatio(contentMode: .fit)
 			.cornerRadius(10)

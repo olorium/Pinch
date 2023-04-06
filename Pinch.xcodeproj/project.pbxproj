@@ -16,6 +16,8 @@
 		8B6F7ED129DF42EB0052994A /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ED029DF42EB0052994A /* ControlImageView.swift */; };
 		8B6F7ED329DF48EA0052994A /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ED229DF48EA0052994A /* ControlPanelView.swift */; };
 		8B6F7ED529DF50320052994A /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ED429DF50320052994A /* DrawerView.swift */; };
+		8B6F7ED729DF51AA0052994A /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7ED629DF51AA0052994A /* PageModel.swift */; };
+		8B6F7EDB29DF529A0052994A /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F7EDA29DF529A0052994A /* PageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		8B6F7ED029DF42EB0052994A /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 		8B6F7ED229DF48EA0052994A /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
 		8B6F7ED429DF50320052994A /* DrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
+		8B6F7ED629DF51AA0052994A /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		8B6F7EDA29DF529A0052994A /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		8B6F7ECA29DEEA5E0052994A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B6F7ED629DF51AA0052994A /* PageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		8B6F7ECB29DEEA670052994A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8B6F7EDA29DF529A0052994A /* PageData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6F7ED729DF51AA0052994A /* PageModel.swift in Sources */,
+				8B6F7EDB29DF529A0052994A /* PageData.swift in Sources */,
 				8B6F7ED529DF50320052994A /* DrawerView.swift in Sources */,
 				8B6F7EBD29DEE1640052994A /* ContentView.swift in Sources */,
 				8B6F7ECF29DF324B0052994A /* InfoPanelView.swift in Sources */,

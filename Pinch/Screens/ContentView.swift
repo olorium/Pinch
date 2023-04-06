@@ -15,6 +15,10 @@ struct ContentView: View {
 	@State private var imageScale: CGFloat = 1
 	/// Offset for the image.
 	@State private var imageOffset: CGSize = .zero
+	/// The index of the image.
+	@State private var pageIndex = 0
+	/// Images data.
+	let pages = PageData.pages
 	
 	// MARK: - Body.
     var body: some View {
@@ -26,7 +30,8 @@ struct ContentView: View {
 					imageScale: $imageScale,
 					imageOffset: $imageOffset,
 					isAnimating: $isAnimating,
-					imageName: "magazine-front-cover") {
+					pageIndex: $pageIndex,
+					pages: pages) {
 						resetImageState()
 					}
 			}
@@ -51,7 +56,11 @@ struct ContentView: View {
 				.padding(.bottom, 30)
 			}
 			.overlay(alignment: .topTrailing) {
-				DrawerView(isAnimating: $isAnimating)
+				DrawerView(
+					isAnimating: $isAnimating,
+					pageIndex: $pageIndex,
+					pages: pages
+				)
 			}
 		}
 		.navigationViewStyle(.stack)
