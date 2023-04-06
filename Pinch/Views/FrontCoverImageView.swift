@@ -18,6 +18,8 @@ struct FrontCoverImageView: View {
 	@Binding var isAnimating: Bool
 	///Image name to present.
 	let imageName: String
+	/// Closure for resetting image state.
+	let resetImageState: () -> Void
 	
 	// MARK: - Body.
 	var body: some View {
@@ -56,20 +58,4 @@ struct FrontCoverImageView: View {
 			)
 
 	}
-	
-	// MARK: - Methods
-	
-	/// Resets image scale and offset to default values with animation.
-	private func resetImageState() {
-		withAnimation(.spring()) {
-			imageScale = 1
-			imageOffset = .zero
-		}
-	}
-}
-
-struct FrontCoverImageView_Previews: PreviewProvider {
-    static var previews: some View {
-		FrontCoverImageView(imageScale: .constant(1), imageOffset: .constant(.zero), isAnimating: .constant(true), imageName: "magazine-front-cover")
-    }
 }

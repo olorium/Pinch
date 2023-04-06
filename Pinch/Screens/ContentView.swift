@@ -26,8 +26,9 @@ struct ContentView: View {
 					imageScale: $imageScale,
 					imageOffset: $imageOffset,
 					isAnimating: $isAnimating,
-					imageName: "magazine-front-cover"
-				)
+					imageName: "magazine-front-cover") {
+						resetImageState()
+					}
 			}
 			.navigationTitle("Pinch and Zoom")
 			.navigationBarTitleDisplayMode(.inline)
@@ -39,9 +40,29 @@ struct ContentView: View {
 					.padding(.horizontal)
 					.padding(.top, 30)
 			}
+			.overlay(alignment: .bottom) {
+				ControlPanelView(
+					imageScale: $imageScale,
+					imageOffset: $imageOffset,
+					isAnimating: $isAnimating,
+					resetImageState: {
+						resetImageState()
+					})
+				.padding(.bottom, 30)
+			}
 		}
 		.navigationViewStyle(.stack)
     }
+	
+	// MARK: - Methods
+	
+	/// Resets image scale and offset to default values with animation.
+	private func resetImageState() {
+		withAnimation(.spring()) {
+			imageScale = 1
+			imageOffset = .zero
+		}
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
